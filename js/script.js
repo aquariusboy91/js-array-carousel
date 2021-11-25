@@ -56,6 +56,8 @@ let thumb_big = document.querySelector (".thumb-big");
 
 let thumb_small = document.querySelector (".thumb-small");
 
+let arrow_up = `<i class="fas fa-chevron-up"></i>`;
+arrow_up.className = "arrow";
 
 
 for(i = 0; i < items.length; i++) {
@@ -66,9 +68,14 @@ for(i = 0; i < items.length; i++) {
     image.className = "img-small";
     image.src = items[i];
     thumb.append(image);
+    if (i == 0) {
+        thumb.append(arrow_up);
+    }
+    console.log ([i]);
 }
 
 let image_b = document.createElement("img");
 image_b.className = "img-big";
 image_b.src = 'img/01.jpg';
 thumb_big.append(image_b);
+
