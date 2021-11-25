@@ -54,11 +54,21 @@ const text = [
 
 let thumb_big = document.querySelector (".thumb-big");
 
-let thumb_small = document.querySelector ("thumb-small");
+let thumb_small = document.querySelector (".thumb-small");
 
 
 
 for(i = 0; i < items.length; i++) {
     let thumb = document.createElement("div");
-    
+    thumb_small.appendChild(thumb);
+    thumb.className = "thumb";
+    let image = document.createElement ('img');
+    image.className = "img-small";
+    image.src = items[i];
+    thumb.append(image);
 }
+
+let image_b = document.createElement("img");
+image_b.className = "img-big";
+image_b.src = 'img/01.jpg';
+thumb_big.append(image_b);
